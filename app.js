@@ -14,7 +14,6 @@ const morgan = require('morgan');
 const userRoutes = require('./routes/user');
 const sauceRoutes = require('./routes/sauce');
 
-
 app.use(cors());
 app.use(rateLimit);
 app.use(helmet({ crossOriginResourcePolicy: { policy: "same-site" } }));
@@ -22,8 +21,6 @@ app.use(express.json());
 app.use(mongoSanitize());
 app.use(xssClean());
 app.use(morgan('tiny'));
-
-
 
 mongoose.connect('mongodb://seankemp:8HzhBI5Wa6aPTVFn@ac-q7ukly8-shard-00-00.f9zjypn.mongodb.net:27017,ac-q7ukly8-shard-00-01.f9zjypn.mongodb.net:27017,ac-q7ukly8-shard-00-02.f9zjypn.mongodb.net:27017/?ssl=true&replicaSet=atlas-cgvqyn-shard-0&authSource=admin&retryWrites=true&w=majority',
 { useNewUrlParser: true,
