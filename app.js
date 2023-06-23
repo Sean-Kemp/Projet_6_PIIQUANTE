@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const rateLimit = require('./middleware/rateLimit');
 const mongoSanitize = require('express-mongo-sanitize');
 const xssClean = require('xss-clean');
+const morgan = require('morgan');
 
 
 const userRoutes = require('./routes/user');
@@ -20,6 +21,7 @@ app.use(helmet({ crossOriginResourcePolicy: { policy: "same-site" } }));
 app.use(express.json());
 app.use(mongoSanitize());
 app.use(xssClean());
+app.use(morgan('tiny'));
 
 
 

@@ -70,8 +70,8 @@ exports.login = (req, res, next) => {
 
 exports.getAllUsers = (req, res, next) => {
     User.find().then(
-        (things) => {
-            res.status(200).json(things);
+        (users) => {
+            res.status(200).json(users);
         }
     ).catch(
         (error) => {
