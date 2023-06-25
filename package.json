@@ -20,6 +20,7 @@
     "helmet": "^7.0.0",
     "jsonwebtoken": "^9.0.0",
     "maskdata": "^1.2.2",
+    "maskemail": "^1.0.0",
     "mongoose": "^7.2.2",
     "mongoose-unique-validator": "^4.0.0",
     "morgan": "^1.10.0",
