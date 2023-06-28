@@ -8,13 +8,13 @@ module.exports = (req, res, next) => {
       req.userIdToken = userId;
       req.auth = { userId };
       if (req.body.userId && req.body.userId !== userId) {
-        throw 'Invalid user ID';
+        throw 'ID utilisateur non valide.';
       } else {
         next();
       }
     } catch {
       res.status(401).json({
-        error: new Error('Invalid request!')
+        error: new Error('Requête non valide.')
       });
     }
   }; 

@@ -5,6 +5,6 @@ module.exports = (limiter({
     max: 100,
     message: {
         code: 429,
-        message: 'Too many requests from this IP! Please try again in 1h.'
+        message: 'Trop de requêtes provenant de cette IP ! Veuillez réessayer dans 1h.'
     }
 }))
