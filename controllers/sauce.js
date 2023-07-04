@@ -144,7 +144,7 @@ exports.deleteSauce = (req, res, next) => {
 
 //Gestion des likes/dislikes/unlikes :
 exports.likeSauce = (req, res, next) => {
-    Sauce.updateOne({ _id: req.params.id }).then(
+    Sauce.updateOne({ id: req.params.id }).then(
         (sauce) => {
             if (req.body.like == 1) { //pour ajouter un like
                 Sauce.updateOne(
